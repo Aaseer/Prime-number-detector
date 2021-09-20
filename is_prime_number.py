@@ -1,8 +1,8 @@
 prime_number_count = 0
 ask = str(input('Do you want to manually put all the prime numbers or a series of prime numbers? (Type "m" for manual and "s" for series)\n'))
 
-if ask == 'm':
-    input_prime = str(input('Please input the numbers list from which you want to get the prime numbers. (Seperate each number with a " "): '))
+if ask == 'm' or ask == 'manual':
+    input_prime = str(input('Please input the numbers list from which you want to get the prime numbers. (Seperate each number with a ", "): '))
 
     as_list = input_prime.split(", ")
 
@@ -39,7 +39,7 @@ if ask == 'm':
     print(f'\n \n \n{prime_number_count} prime numbers were detected')
     prime_number_count = 0
 
-elif ask == 's':
+elif ask == 's' or ask == 'series':
     input_prime_series = str(input('Put the number to start from and the number to end the program with and seperate with a ", " example: 0, 213 (gets prime numbers from 0 to 213) \n'))
 
     if input_prime_series == '':
@@ -76,4 +76,4 @@ elif ask == 's':
         print(f'\n \n \n {prime_number_count} prime numbers were detected')
         prime_number_count = 0
 else:
-    print('That\'s an invalid argument. Your commands are either s or m')
+    print('That\'s an invalid argument. Your commands are either "s" or "m"')
